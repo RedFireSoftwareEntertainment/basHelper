@@ -23,9 +23,9 @@ Some features of this software are:
  
 
  1. Download the latest stable release of the source code from the releases tab.
- 2. Open a terminal inside the source code folder and type: `sudo ./makebh.sh`
+ 2. Open a terminal inside the source code folder or `cd` into it and type: `sudo ./makebh.sh`
  3. Wait for the installer to say that it is finished and...
- 4. Done!
+ 4. Done! 🎉
  
  or you could just save yourself all of the trouble by just getting [AZOS GNU/Linux](https://sites.google.com/view/azosofficialsite/download/versions). Version 2.0 has basHelper built-in :)
 
@@ -53,7 +53,7 @@ Syntax is explained by using `bH -h` but we are going to show it here as well fo
 
 
 ## Drawbacks
-Unfortunately, it is not perfect... **YET! ;)**
+Unfortunately, it is not perfect... **YET!** 😉
 
 but no really, there are some sad drawbacks to this.
 
@@ -63,5 +63,6 @@ but no really, there are some sad drawbacks to this.
  
 ## Goals
  - [ ] Add a way for basHelper to manage dependencies.
- - [ ] Infinite packages to be able to be installed in one command
-
+ - [ ] Infinite packages to be able to be installed in one command.
+ - [ ] GUI interface.
+ - [ ] Install packages from repositories that are mentioned in some kind of .conf file like what arch does with pacman.conf
