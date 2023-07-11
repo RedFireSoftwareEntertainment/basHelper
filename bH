@@ -16,6 +16,9 @@ help(){
   printf ""
   printf "Syntax: bH [action] ([package])"
   printf ""
+  printf "You can install up to 10 packages at once in this format:"
+  printf "'bH -i/d [package] [package] [package] [package] [package] [package] [package] [package] [package] [package]'"
+  printf ""
   printf "Actions:"
   printf "        -i | installs the specified package."
   printf "        -c | cleans up the terminal window so it can be nice and fresh, don't specify a package after."
@@ -35,7 +38,8 @@ clean(){
 
 install() {
     printf "Preparing to install $2"
-    git clone https://aur.archlinux.org/cgit/aur.git/snapshot/$2.tar.gz/
+    git clone https://aur.archlinux.org/cgit/aur.git/snapshot/"$2".tar.gz/
+    unzip "$2".tar.gz ./
     cd ./$2
     makepkg --install --syncdeps --rmdeps --clean --noconfirm 
 }
