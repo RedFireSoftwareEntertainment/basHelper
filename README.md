@@ -5,7 +5,7 @@
 
 ## What this?
 
-A **lightweight, open-source, completely customizable and free** AUR helper written in bash, made for AZOS GNU/Linux by Red Fire Software Entertainment. Part of the AZOS GNU/Linux tool-set!
+A **lightweight, open-source, completely customizable and free** AUR helper written in bash, made for AZOS GNU/Linux by Red Fire Software Entertainment. **Part of the AZOS GNU/Linux tool-set!**
 
 ## Features
 
@@ -66,3 +66,5 @@ but no really, there are some sad drawbacks to this.
  - [ ] Infinite packages to be able to be installed in one command.
  - [ ] GUI interface.
  - [ ] Install packages from repositories that are mentioned in some kind of .conf file like what arch does with pacman.conf
+
+Copytight © 2019-2023 Red Fire Software Entertainment. All rights reserved.
