@@ -35,7 +35,7 @@ clean(){
 
 install() {
     printf "Preparing to install $2"
-    git clone https://aur.archlinux.org/$2
+    git clone https://aur.archlinux.org/$2.git
     cd ./$2
     makepkg --install --syncdeps --rmdeps --clean --noconfirm 
 }
