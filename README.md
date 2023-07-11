@@ -67,4 +67,9 @@ but no really, there are some sad drawbacks to this.
  - [ ] GUI interface.
  - [ ] Install packages from repositories that are mentioned in some kind of .conf file like what arch does with pacman.conf
 
-Copytight © 2019-2023 Red Fire Software Entertainment. All rights reserved.
+
+## Legal
+
+Since this is part of AZOS GNU/Linux project then all [legal info](https://sites.google.com/view/azosofficialsite/legal) applies here
+
+Copyright © 2019-2023 Red Fire Software Entertainment. All rights reserved.
