@@ -14,7 +14,7 @@ help(){
   printf "# Welcome to basHelper, the extremely lightweight and customizable AUR helper by Red Fire Software Entertainment for AZOS GNU/Linux and other Arch-Based distros. #"
   printf "###################################################################################################################################################################"
   printf ""
-  printf "Syntax:(sudo) bH [action] ([package])"
+  printf "Syntax: bH [action] ([package])"
   printf ""
   printf "Actions:"
   printf "        -i | installs the specified package."
@@ -35,7 +35,7 @@ clean(){
 
 install() {
     printf "Preparing to install $2"
-    git clone https://aur.archlinux.org/$2.git
+    git clone https://aur.archlinux.org/cgit/aur.git/snapshot/$2.tar.gz/
     cd ./$2
     makepkg --install --syncdeps --rmdeps --clean --noconfirm 
 }
