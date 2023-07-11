@@ -5,7 +5,7 @@
 
 ## What this?
 
-A **lightweight, open-source, completely customizable and free** AUR helper written in bash, made for AZOS GNU/Linux by Red Fire Software Entertainment.
+A **lightweight, open-source, completely customizable and free** AUR helper written in bash, made for AZOS GNU/Linux by Red Fire Software Entertainment. Part of the AZOS GNU/Linux tool-set!
 
 ## Features
 
