@@ -54,31 +54,23 @@ then
   help
 else
   printf "Invalid Syntax."
-fi
-
-if [ $1 == "-c" ] || [ $# -eq  1]
+elif [ $1 == "-c" ] || [ $# -eq  1]
 then
   clean
 else
   printf "Invalid Syntax."
-fi
-
-if [ $1 == "-d" ] || [ $# -eq  2]
+elifif [ $1 == "-d" ] || [ $# -eq  2]
 then
   install
   clean
 else
   printf "Invalid Syntax."
-fi
-
-if [ $1 == "-i" ] || [ $# -eq  2]
+eliif [ $1 == "-i" ] || [ $# -eq  2]
 then
   install
 else
   printf "Invalid Syntax."
-fi
-
-if [ $1 == "-r" ] || [ $# -eq  2]
+elif [ $1 == "-r" ] || [ $# -eq  2]
 then
   remove
 else
