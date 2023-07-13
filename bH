@@ -52,28 +52,26 @@ remove() {
 if [ $1 == "-h" ] || [ $# -eq  1]
 then
   help
-else
-  printf "Invalid Syntax."
+
 else if [ $1 == "-c" ] || [ $# -eq  1]
 then
   clean
-else
-  printf "Invalid Syntax."
+
 else if [ $1 == "-d" ] || [ $# -eq  2]
 then
   install
   clean
-else
-  printf "Invalid Syntax."
+
 else if [ $1 == "-i" ] || [ $# -eq  2]
 then
   install
-else
-  printf "Invalid Syntax."
+
 else if [ $1 == "-r" ] || [ $# -eq  2]
 then
   remove
+
 else
   printf "Invalid Syntax."
+
 fi
   
