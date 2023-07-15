@@ -37,7 +37,7 @@ clean(){
 }
 
 install() {
-    printf "Preparing to install $2"
+    printf "Preparing to install $1"
     git clone https://aur.archlinux.org/cgit/aur.git/snapshot/$2.tar.gz/
     cd
     cd Downloads
@@ -50,23 +50,22 @@ remove() {
     sudo pacman -R $2
 }
 
-
-if [ $1 == "-h" ] || [ $# -eq  1]
+if [ "$1" == "-h" ] || [ "$#" -eq  1 ]
 then
   help
-else if [ $1 == "-c" ] || [ $# -eq  1]
+elif [ "$1" == "-c" ] || [ "$#" -eq  1 ]
 then
   clean
-else if [ $1 == "-d" ] || [ $# -eq  2]
+elif [ "$1" == "-d" ] || [ "$#" -eq  2 ]
 then
-  install
+  install "$2"
   clean
-else if [ $1 == "-i" ] || [ $# -eq  2]
+elif [ "$1" == "-i" ] || [ "$#" -eq  2 ]
 then
-  install
-else if [ $1 == "-r" ] || [ $# -eq  2]
+  install "$2"
+elif [ "$1" == "-r" ] || [ "$#" -eq  2 ]
 then
-  remove
+  remove "$2"
 else
   printf "basHelper: Invalid Syntax"
 fi
