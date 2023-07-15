@@ -47,7 +47,7 @@ install() {
 }
 
 remove() {
-    sudo pacman -R $2
+    sudo pacman -R "$2"
 }
 
 if [ "$1" == "-h" ] || [ "$#" -eq  1 ]
