@@ -70,5 +70,3 @@ then
 else
   printf "basHelper: Invalid Syntax"
 fi
-
-exit
