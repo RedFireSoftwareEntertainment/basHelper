@@ -30,7 +30,6 @@ help(){
 
 install() {
     printf "Preparing to install $2"
-    git clone https://aur.archlinux.org/cgit/aur.git/snapshot/"$2".tar.gz/
     curl https://aur.archlinux.org/cgit/aur.git/snapshot/"$2".tar.gz --output "$2".tar.gz
     cd
     cd Downloads
