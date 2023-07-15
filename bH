@@ -69,4 +69,4 @@ then
   remove
 else
   printf "basHelper: Invalid Syntax"
-
+fi
