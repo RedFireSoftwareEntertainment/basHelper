@@ -11,7 +11,7 @@
 help(){
   printf ""
   printf "###################################################################################################################################################################" 
-  printf "# Welcome to basHelper, the extremely lightweight and customizable AUR helper by Red Fire Software Entertainment for AZOS GNU/Linux and other Arch-Based distros. #"
+  printf "# Welcome to basHelper, the lightweight and customizable AUR helper by Red Fire Software Entertainment for AZOS GNU/Linux and other Arch-Based distros. #"
   printf "###################################################################################################################################################################"
   printf ""
   printf "Syntax: bH [action] ([package])"
@@ -69,5 +69,4 @@ then
   remove
 else
   printf "basHelper: Invalid Syntax"
-fi
-;;
+
