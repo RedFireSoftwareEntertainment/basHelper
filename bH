@@ -39,6 +39,8 @@ clean(){
 install() {
     printf "Preparing to install $2"
     git clone https://aur.archlinux.org/cgit/aur.git/snapshot/$2.tar.gz/
+    cd
+    cd Downloads
     unzip $2.tar.gz ./
     cd ./$2
     makepkg --install --syncdeps --rmdeps --clean --noconfirm 
