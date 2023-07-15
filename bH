@@ -21,8 +21,6 @@ help(){
   printf ""
   printf "Actions:"
   printf "        -i | installs the specified package."
-  printf "        -c | cleans up the terminal window so it can be nice and fresh, don't specify a package after."
-  printf "        -d | installs the specified package and then clears the terminal window"
   printf "        -r | removes a package using pacman"
   printf "        -h | shows this, don't specify a package after"
   printf ""
@@ -30,15 +28,10 @@ help(){
   printf ""
 }
 
-clean(){
-  printf "Clearing up..."
-  sleep 3
-  clear
-}
-
 install() {
     printf "Preparing to install $2"
     git clone https://aur.archlinux.org/cgit/aur.git/snapshot/"$2".tar.gz/
+    curl https://aur.archlinux.org/cgit/aur.git/snapshot/"$2".tar.gz --output "$2".tar.gz
     cd
     cd Downloads
     unzip "$2".tar.gz ./
@@ -53,13 +46,6 @@ remove() {
 if [ "$1" == "-h" ] || [ "$#" -eq  1 ]
 then
   help
-elif [ "$1" == "-c" ] || [ "$#" -eq  1 ]
-then
-  clean
-elif [ "$1" == "-d" ] || [ "$#" -eq  2 ]
-then
-  install "$2"
-  clean
 elif [ "$1" == "-i" ] || [ "$#" -eq  2 ]
 then
   install "$2"
