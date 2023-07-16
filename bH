@@ -34,7 +34,7 @@ install() {
     tar -xvzf $1.tar.gz
     cd $1
     makepkg --install --syncdeps --clean --noconfirm 
-    echo "Installed, removing leftover junk files."
+    echo "Removing leftover junk files."
     cd 
     sudo rm -rf basHelperTEMP
     echo "Completed!"
