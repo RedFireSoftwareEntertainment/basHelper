@@ -30,16 +30,25 @@ help(){
 
 install() {
     printf "Preparing to install $2"
-    curl https://aur.archlinux.org/cgit/aur.git/snapshot/"$2".tar.gz --output "$2".tar.gz
     cd
-    cd Downloads
+    mkdir basHelperTEMP
+    cd basHelperTEMP
+    curl https://aur.archlinux.org/cgit/aur.git/snapshot/"$2".tar.gz --output "$2".tar.gz
     unzip "$2".tar.gz ./
-    cd ./"$2"
     makepkg --install --syncdeps --rmdeps --clean --noconfirm 
+    printf "Installed, removing leftover junk files."
+    cd 
+    sudo rm -rf basHelperTEMP
+    printf "Completed!"
+    sleep 3
+    clear
 }
 
 remove() {
     sudo pacman -R "$2"
+    printf "Completed!"
+    sleep 3
+    clear
 }
 
 if [ "$1" == "-h" ] || [ "$#" -eq  1 ]
@@ -47,10 +56,10 @@ then
   help
 elif [ "$1" == "-i" ] || [ "$#" -eq  2 ]
 then
-  install "$2"
+  install
 elif [ "$1" == "-r" ] || [ "$#" -eq  2 ]
 then
-  remove "$2"
+  remove
 else
   printf "basHelper: Invalid Syntax"
 fi
