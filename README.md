@@ -5,7 +5,7 @@
 
 ## What this?
 
-A **lightweight, open-source, completely customizable and free** AUR helper written in bash, made for AZOS GNU/Linux by Red Fire Software Entertainment. **Part of the AZOS GNU/Linux tool-set!**
+A **lightweight, open-source, completely customizable and free** AUR helper written in bash, made for AZOS GNU/Linux by Red Fire Software Entertainment. **Part of the RedKit tool-set!**
 
 ## Features
 
@@ -27,7 +27,7 @@ Some features of this software are:
  3. Wait for the installer to say that it is finished and...
  4. Done! 🎉
  
- or you could just save yourself all of the trouble by just getting [AZOS GNU/Linux](https://sites.google.com/view/azosofficialsite/download/versions). Version 2.0 has basHelper built-in :)
+ or you could just save yourself all of the trouble by just getting [AZOS GNU/Linux](https://sites.google.com/view/azosofficialsite/download/versions). Version 2.0 has basHelper and the rest of RedKit built-in :)
 
 ## Dependencies
 
@@ -41,9 +41,6 @@ Syntax is explained by using `bH -h` but we are going to show it here as well fo
 
     Syntax:bH [action] ([package])
     
-    You can install up to 10 packages at once in this format:
-    'bH -i/d [package] [package] [package] [package] [package] [package] [package] [package] [package] [package]'
-    
     Actions:
                      -i | installs the specified package.
                      -r | removes a package using pacman
@@ -55,12 +52,10 @@ Unfortunately, it is not perfect... **YET!** 😉
 
 but no really, there are some sad drawbacks to this.
 
- 1. This helper does not install dependencies, which is really sad but we will keep updating this software with new features all the time!
- 2. Obviously not the fastest out there since it is written in bash.
- 3. Only 10 packages can be installed at once.
+ 1. Obviously not the fastest out there since it is written in bash.
+ 2. Only 1 package can be installed at once.
  
 ## Goals
- - [ ] Add a way for basHelper to manage dependencies.
  - [ ] Infinite packages to be able to be installed in one command.
  - [ ] GUI interface.
  - [ ] Install packages from repositories that are mentioned in some kind of .conf file like what arch does with pacman.conf
