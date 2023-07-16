@@ -9,44 +9,41 @@
 # If you have a better name, open an issue or something XD
 
 help(){
-  printf ""
-  printf "###################################################################################################################################################################" 
-  printf "# Welcome to basHelper, the lightweight and customizable AUR helper by Red Fire Software Entertainment for AZOS GNU/Linux and other Arch-Based distros. #"
-  printf "###################################################################################################################################################################"
-  printf ""
-  printf "Syntax: bH [action] ([package])"
-  printf ""
-  printf "You can install up to 10 packages at once in this format:"
-  printf "'bH -i/d [package] [package] [package] [package] [package] [package] [package] [package] [package] [package]'"
-  printf ""
-  printf "Actions:"
-  printf "        -i | installs the specified package."
-  printf "        -r | removes a package using pacman"
-  printf "        -h | shows this, don't specify a package after"
-  printf ""
-  printf "Thank you for using bH! Many new features coming so stay tuned!"
-  printf ""
+  echo ""
+  echo "###################################################################################################################################################################" 
+  echo "# Welcome to basHelper, the lightweight and customizable AUR helper by Red Fire Software Entertainment for AZOS GNU/Linux and other Arch-Based distros. #"
+  echo "###################################################################################################################################################################"
+  echo ""
+  echo "Syntax: bH [action] ([package])"
+  echo ""
+  echo "Actions:"
+  echo "        -i | installs the specified package."
+  echo "        -r | removes a package using pacman"
+  echo "        -h | shows this, don't specify a package after"
+  echo ""
+  echo "Thank you for using bH! Many new features coming so stay tuned!"
+  echo ""
 }
 
 install() {
-    printf "Preparing to install $2"
+    echo "Preparing to install $2"
     cd
     mkdir basHelperTEMP
     cd basHelperTEMP
     curl https://aur.archlinux.org/cgit/aur.git/snapshot/"$2".tar.gz --output "$2".tar.gz
     unzip "$2".tar.gz ./
-    makepkg --install --syncdeps --rmdeps --clean --noconfirm 
-    printf "Installed, removing leftover junk files."
+    makepkg --install --syncdeps --clean --noconfirm 
+    echo "Installed, removing leftover junk files."
     cd 
     sudo rm -rf basHelperTEMP
-    printf "Completed!"
+    echo "Completed!"
     sleep 3
     clear
 }
 
 remove() {
     sudo pacman -R "$2"
-    printf "Completed!"
+    echo "Completed!"
     sleep 3
     clear
 }
@@ -61,5 +58,5 @@ elif [ "$1" == "-r" ] || [ "$#" -eq  2 ]
 then
   remove
 else
-  printf "basHelper: Invalid Syntax"
+  echo "basHelper: Invalid Syntax"
 fi
