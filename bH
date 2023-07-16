@@ -31,7 +31,8 @@ install() {
     mkdir basHelperTEMP
     cd basHelperTEMP
     curl https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz --output $1.tar.gz
-    tar -xvzf $1.tar.gz 
+    tar -xvzf $1.tar.gz
+    cd $1
     makepkg --install --syncdeps --clean --noconfirm 
     echo "Installed, removing leftover junk files."
     cd 
