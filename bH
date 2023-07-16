@@ -26,12 +26,12 @@ help(){
 }
 
 install() {
-    echo "Preparing to install ($2)"
+    echo "Preparing to install $1"
     cd
     mkdir basHelperTEMP
     cd basHelperTEMP
-    curl https://aur.archlinux.org/cgit/aur.git/snapshot/($2).tar.gz --output ($2).tar.gz
-    unzip ($2).tar.gz ./
+    curl https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz --output $1.tar.gz
+    unzip $1.tar.gz ./
     makepkg --install --syncdeps --clean --noconfirm 
     echo "Installed, removing leftover junk files."
     cd 
@@ -42,7 +42,7 @@ install() {
 }
 
 remove() {
-    sudo pacman -R ($2)
+    sudo pacman -R $1
     echo "Completed!"
     sleep 3
     clear
@@ -53,10 +53,10 @@ then
   help
 elif [ "$1" == "-i" ] || [ "$#" -eq  2 ]
 then
-  install
+  install "$2"
 elif [ "$1" == "-r" ] || [ "$#" -eq  2 ]
 then
-  remove
+  remove "$2"
 else
   echo "basHelper: Invalid Syntax"
 fi
