@@ -46,8 +46,6 @@ Syntax is explained by using `bH -h` but we are going to show it here as well fo
     
     Actions:
                      -i | installs the specified package.
-                     -c | cleans up the terminal window so it can be nice and fresh, don't specify a package after.
-                     -d | installs the specified package and then clears the terminal window
                      -r | removes a package using pacman
                      -h | shows this, don't specify a package after
 
