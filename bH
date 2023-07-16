@@ -26,12 +26,12 @@ help(){
 }
 
 install() {
-    echo "Preparing to install $2"
+    echo "Preparing to install ($2)"
     cd
     mkdir basHelperTEMP
     cd basHelperTEMP
-    curl https://aur.archlinux.org/cgit/aur.git/snapshot/"$2".tar.gz --output "$2".tar.gz
-    unzip "$2".tar.gz ./
+    curl https://aur.archlinux.org/cgit/aur.git/snapshot/($2).tar.gz --output ($2).tar.gz
+    unzip ($2).tar.gz ./
     makepkg --install --syncdeps --clean --noconfirm 
     echo "Installed, removing leftover junk files."
     cd 
@@ -42,7 +42,7 @@ install() {
 }
 
 remove() {
-    sudo pacman -R "$2"
+    sudo pacman -R ($2)
     echo "Completed!"
     sleep 3
     clear
