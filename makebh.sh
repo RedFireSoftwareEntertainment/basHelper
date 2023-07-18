@@ -20,7 +20,8 @@ main(){
       chmod +x bH
       export PATH=$PATH:/usr/RedKit
    else
-      mkdir /usr/RedKit  
+      cd /usr
+      mkdir RedKit  
       cp bH /usr/RedKit
       cd /usr/RedKit
       chmod +x bH
