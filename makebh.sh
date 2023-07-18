@@ -14,10 +14,18 @@
 #After that it will mark "bH" as an executable and then you will be able to execute the "bH" command inside the terminal.
 
 su
-mkdir /RedKit
-cp bH /RedKit
-cd /RedKit
-chmod +x bH
+if [[ -d /RedKit ]]; then    
+    cp bH /RedKit
+    cd /RedKit
+    chmod +x bH
+    export PATH=$PATH:/RedKit
+else
+    mkdir /RedKit  
+    cp bH /RedKit
+    cd /RedKit
+    chmod +x bH
+    export PATH=$PATH:/RedKit
+fi
 
 
 
