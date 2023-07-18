@@ -13,19 +13,23 @@
 #This script will create a "RedKit" directory inside root and add it to PATH if it doesn't exist and will copy and paste the "bH" file inside that directory.
 #After that it will mark "bH" as an executable and then you will be able to execute the "bH" command inside the terminal.
 
+main(){
+   if [[ -d /RedKit ]]; then    
+      cp bH /RedKit
+      cd /RedKit
+      chmod +x bH
+      export PATH=$PATH:/RedKit
+   else
+      mkdir /RedKit  
+      cp bH /RedKit
+      cd /RedKit
+      chmod +x bH
+      export PATH=$PATH:/RedKit
+   fi
+}
+
 su
-if [[ -d /RedKit ]]; then    
-    cp bH /RedKit
-    cd /RedKit
-    chmod +x bH
-    export PATH=$PATH:/RedKit
-else
-    mkdir /RedKit  
-    cp bH /RedKit
-    cd /RedKit
-    chmod +x bH
-    export PATH=$PATH:/RedKit
-fi
+main
 
 
 
