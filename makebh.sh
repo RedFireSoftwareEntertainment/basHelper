@@ -14,17 +14,17 @@
 #After that it will mark "bH" as an executable and then you will be able to execute the "bH" command inside the terminal.
 
 main(){
-   if [[ -d /RedKit ]]; then    
-      cp bH /RedKit
-      cd /RedKit
+   if [[ -d /usr/RedKit ]]; then    
+      cp bH /usr/RedKit
+      cd /usr/RedKit
       chmod +x bH
-      export PATH=$PATH:/RedKit
+      export PATH=$PATH:/usr/RedKit
    else
-      mkdir /RedKit  
-      cp bH /RedKit
-      cd /RedKit
+      mkdir /usr/RedKit  
+      cp bH /usr/RedKit
+      cd /usr/RedKit
       chmod +x bH
-      export PATH=$PATH:/RedKit
+      export PATH=$PATH:/usr/RedKit
    fi
 }
 
