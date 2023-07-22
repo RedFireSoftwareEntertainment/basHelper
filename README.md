@@ -1,6 +1,8 @@
 
 ![bH logo](https://github.com/RedFireSoftwareEntertainment/basHelper/assets/98542488/c1f541ab-f861-4b4e-873a-99cf8124f340)
 
+[**RedKit**](https://github.com/RedFireSoftwareEntertainment/RedKit)
+
 # basHelper
 
 ## What this?
