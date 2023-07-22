@@ -14,7 +14,7 @@
 #After that it will mark "bH" as an executable and then you will be able to execute the "bH" command inside the terminal.
 
 main(){
-   if [[ -d /usr/RedKit ]]; then    
+   if [[ -e /usr/RedKit ]]; then    
       cp bH /usr/RedKit
       cd /usr/RedKit
       chmod +x bH
