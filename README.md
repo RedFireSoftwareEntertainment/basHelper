@@ -33,7 +33,7 @@ Some features of this software are:
 
 ## Dependencies
 
- 1. **unzip**
+ 1. **tar**
  2. **pacman**
 
 ## Usage
