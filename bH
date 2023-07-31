@@ -49,13 +49,13 @@ remove() {
     clear
 }
 
-if [ "$1" == "-h" ] || [ "$#" -eq  1 ]
+if [ "$1" == "-h" ] && [ "$#" -eq  1 ]
 then
   help
-elif [ "$1" == "-i" ] || [ "$#" -eq  2 ]
+elif [ "$1" == "-i" ] && [ "$#" -eq  2 ]
 then
   install "$2"
-elif [ "$1" == "-r" ] || [ "$#" -eq  2 ]
+elif [ "$1" == "-r" ] && [ "$#" -eq  2 ]
 then
   remove "$2"
 else
