@@ -68,3 +68,6 @@ but no really, there are some sad drawbacks to this.
 Since this is part of AZOS GNU/Linux project then all [legal info](https://sites.google.com/view/azosofficialsite/legal) applies here
 
 Copyright © 2019-2023 Red Fire Software Entertainment. All rights reserved.
+
+Copyright © 2023-2023 RedKit Contributors. All rights reserved.
+
